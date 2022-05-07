@@ -1,18 +1,67 @@
 <!DOCTYPE html>
 <html lang="">
-
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SINCENTRO-TEST</title>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script language="javascript" type="text/javascript" src="p5.min.js"></script>
-    <script language="javascript" type="text/javascript" src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
   <body>
+    <!-- CONTROLS -->
+    <div class="controls-container">
+      <div class="slidecontainer">
+        <label>Radius</label>
+        <input
+          type="range"
+          min="5"
+          max="200"
+          value="70"
+          class="slider"
+          id="radius-input"
+        />
+      </div>
+      <div>
+        <label for="head">Background</label>
+        <input type="color" id="background-input" name="head" value="#ff00ff" />
+      </div>
+      <div>
+        <button class="controls-switcher" id="controls-btn">Controls</button>
+      </div>
+    </div>
+    <!-- DRAW -->
     <div id="sincentro"></div>
-  </body>
 
+    <!-- Scripts -->
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="assets/js/p5.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="assets/js/redux.min.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="actions/controls.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="reducers/controls.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="store.js"
+    ></script>
+    <script
+      language="javascript"
+      type="text/javascript"
+      src="index.js"
+    ></script>
+  </body>
 </html>
